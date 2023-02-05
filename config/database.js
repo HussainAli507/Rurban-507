@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const connectDatabase = () =>{
 
-    mongoose.connect("mongodb://localhost:27017/rurbanweb",{useNewUrlParser:true}).then((data)=>{
+    mongoose.connect(`mongodb+srv://rurbanadmin:${process.env.adminPassword}@cluster0.tbqlijo.mongodb.net/test`,{useNewUrlParser:true}).then((data)=>{
 
         console.log(`mongodb connected with server:${data.connection.host}`);
         
